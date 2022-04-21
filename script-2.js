@@ -96,24 +96,32 @@ Hints:
 Apply this to the team's average scores 👱🏻‍♀️
 */
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log(calcAverage(3, 4, 5));
 
-const avgDolhins = calcAverage(85, 54, 41);
-const avgKoalas = calcAverage(23, 34, 27);
+// Test 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
 
-console.log(avgDolhins);
-
-console.log(avgKoalas);
-
-function checkWinner(avgDolhins, avgKoalas) {
-  if (avgDolhins >= 2 * avgKoalas) {
-    console.log(`Dolhins win ${avgDolhins} vs ${avgKoalas} `);
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
   } else {
-    console.log(`Koalas win ${avgKoalas} vs ${avgDolhins} `);
+    console.log("No team wins...");
   }
-}
+};
+checkWinner(scoreDolphins, scoreKoalas);
+
+checkWinner(576, 111);
+
+// Test 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
 
 ///////////////////////////////////////
 // Introduction to Arrays
