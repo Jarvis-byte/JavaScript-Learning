@@ -94,8 +94,8 @@ Hints:
 * To calculate average of 3 values, add them all together and divide by 3
 * To check if number A is at least double number B, check for A >= 2 * B. 
 Apply this to the team's average scores 👱🏻‍♀️
-*/
 
+*/
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -150,3 +150,19 @@ console.log(jonas);
 console.log(jonas.length);
 
 //Array Methods
+
+function calcTip(value) {
+  if (value > 50 && value < 300) {
+    return (value * 15) / 100;
+  } else {
+    return (value * 20) / 100;
+  }
+}
+
+const bills = [55, 555, 44];
+const tips = new Array();
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+}
+
+console.log(tips);
