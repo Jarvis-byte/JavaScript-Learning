@@ -96,6 +96,7 @@ Hints:
 Apply this to the team's average scores 👱🏻‍♀️
 
 */
+
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 console.log(calcAverage(3, 4, 5));
 
@@ -199,6 +200,7 @@ HINT: Remember that an array needs a value in each position, and that value can 
 
 GOOD LUCK 😀
 */
+
 function calcTip(value) {
   if (value > 50 && value < 300) {
     return (value * 15) / 100;
@@ -265,3 +267,58 @@ if (info2[interestedIn]) {
 info2.location = "Portugal";
 info2["twitter"] = "@jonasschmedtman";
 console.log(info2);
+
+//Challenge 3
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+// "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
+  );
+}
+///////////////////////////////////////
+// Iteration: The for Loop
+
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️');
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️');
+// console.log('Lifting weights repetition 5 🏋️‍♀️');
+// console.log('Lifting weights repetition 6 🏋️‍♀️');
+// console.log('Lifting weights repetition 7 🏋️‍♀️');
+// console.log('Lifting weights repetition 8 🏋️‍♀️');
+// console.log('Lifting weights repetition 9 🏋️‍♀️');
+// console.log('Lifting weights repetition 10 🏋️‍♀️');
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
